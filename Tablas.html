@@ -1,0 +1,172 @@
+<meta charset="utf-8">
+<html>
+<head>
+    <title>Portal básico</title>
+    <style>
+        body 
+		{
+            font-family: Arial, sans-serif;
+            background-color: #E3E3E3;
+        }
+		h1 
+		{
+            text-align: center;
+            color: #FFFFFF;
+        }
+		h2
+		{
+            color: #25D366;
+        }
+        .MenuSuperior 
+		{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #FFFFFF;
+            height: 50px;
+			border-radius: 10px;
+        }
+        .MenuSuperior a.activo {
+            background-color: #25D366;
+            color: #FFFFFF;
+			padding: 8px 12px;
+            text-decoration: none;
+			border-radius: 10px;
+			font-weight: bold;
+        }
+        .MenuSuperior a:not(.activo) {
+            background-color: #FFFFFF;
+            color: #25D366;
+			text-decoration: none;
+			font-weight: bold;
+        }
+		.ImagenAmpliada 
+		{
+		    display: flex;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .ImagenAmpliada img 
+		{
+            width: 1512px;
+            height: 200px;
+			border-radius: 10px;
+        }
+		.MenuLateral 
+		{
+            width: 200px;
+            float: left;
+            background-color: #25D366;
+			margin-top: 10px;
+			border-radius: 10px;
+        }
+		.MenuLateral a 
+		{
+            color: #FFFFFF;
+			text-decoration: none;
+			align-items: center;
+        }
+        .MenuLateral ul 
+		{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .MenuLateral li {
+            padding: 10px;
+        }
+        .ContenidoCentral 
+		{
+            margin-left: 480px;
+            padding: 20px;
+			color: #000000;
+        }
+		.ContenidoCentral h1 
+        {
+            color: #25D366;
+        }
+		table 
+		{
+            border-collapse: separate;
+            width: 80%;
+            margin: 0px;
+            border: none;
+            border-radius: 10px;
+        }
+        th, td 
+		{
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        th 
+		{
+            background-color: #25D366;
+            color: #FFFFFF;
+        }
+        tr:nth-child(even)
+		{
+            background-color: #E3E3E3;
+        }
+        tr:nth-child(odd) 
+		{
+        background-color: #FFFFFF;
+        }
+        .PieDePagina 
+		{
+            clear: both;
+            background-color: #FFFFFF;
+            color: #25D366;
+            text-align: center;
+            padding: 10px;
+			border-radius: 10px;
+			font-weight: bold;
+			margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="MenuSuperior">
+        <a href="Principal.html">PRINCIPAL</a>
+        <a href="Tablas.html" class="activo">TABLAS</a>
+        <a href="Video.html">VIDEO</a>
+        <a href="Formulario.html">FORMULARIO</a>
+    </div>
+	<div class="ImagenAmpliada">
+        <img src="Imagen1.jpg" alt="Imagen Ampliada">
+    </div>
+	<div class="MenuLateral">
+        <ul>
+		    <h1>‎MENU</h1>
+            <li><a href="Principal.html">PRINCIPAL</a></li>
+            <li><a href="Tablas.html">TABLAS</a></li>
+            <li><a href="Video.html">VIDEO</a></li>
+            <li><a href="Formulario.html">FORMULARIO</a></li>
+        </ul>
+    </div>
+    <div class="ContenidoCentral">
+        <h2>TABLAS</h2>
+        <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Ciudad</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan Yepes</td>
+            <td>Cll 123 N 123</td>
+            <td>1234567890</td>
+            <td>juan@gmail.com</td>
+            <td>Medellín</td>
+            <td>21</td>
+        </tr>
+    </table>
+    </div>
+    <div class="PieDePagina">
+        Autor: Juan Carlos Yepes Gomez
+    </div>
+</body>
+</html>
