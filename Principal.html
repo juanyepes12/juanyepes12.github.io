@@ -38,6 +38,13 @@
 			text-decoration: none;
 			font-weight: bold;
         }
+		.MenuSuperior a:not(.activo):hover 
+		{
+            background-color: rgba(37, 211, 102, 0.5);
+            color: #FFFFFF;
+			border-radius: 10px;
+			padding: 8px 12px;
+        }
 		.ImagenAmpliada 
 		{
 		    display: flex;
@@ -59,11 +66,28 @@
 			margin-top: 10px;
 			border-radius: 10px;
         }
-		.MenuLateral a 
+		.MenuLateral a.activo
 		{
+		    background-color: #25D366;
             color: #FFFFFF;
 			text-decoration: none;
 			align-items: center;
+			border-radius: 10px;
+			font-weight: bold;
+        }
+		.MenuLateral a:not(.activo) 
+		{
+            background-color: #25D366;
+            color: #FFFFFF;
+			text-decoration: none;
+			font-weight: bold;
+        }
+		.MenuLateral a:not(.activo):hover
+		{
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #FFFFFF;
+			border-radius: 10px;
+			padding: 8px 12px;
         }
         .MenuLateral ul 
 		{
@@ -74,6 +98,7 @@
         .MenuLateral li {
             padding: 10px;
         }
+		
         .ContenidoCentral 
 		{
             margin-left: 220px;
@@ -112,7 +137,7 @@
     <div class="MenuLateral">
         <ul>
 		    <h1>‎MENU</h1>
-            <li><a href="Principal.html">PRINCIPAL</a></li>
+            <li><a href="Principal.html" class="activo">PRINCIPAL</a></li>
             <li><a href="Tablas.html">TABLAS</a></li>
             <li><a href="Video.html">VIDEO</a></li>
             <li><a href="Formulario.html">FORMULARIO</a></li>
