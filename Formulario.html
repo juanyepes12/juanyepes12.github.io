@@ -29,14 +29,14 @@
             text-decoration: none;
 			border-radius: 10px;
 			font-weight: bold;
-		cursor: default;
+			cursor: default;
         }
         .MenuSuperior a:not(.activo) {
             background-color: #FFFFFF;
             color: #25D366;
 			text-decoration: none;
 			font-weight: bold;
-		 cursor: pointer;
+			 cursor: pointer;
         }
 		.MenuSuperior a:not(.activo):hover 
 		{
@@ -157,13 +157,13 @@
 	<div class="ImagenAmpliada">
         <img src="Imagen1.jpg" alt="Imagen Ampliada">
     </div>
-    <div class="ContenidoCentral">
-        <!-- Aquí puedes colocar textos e imágenes de un tema seleccionado por ti -->
+     <div class="ContenidoCentral">
+        <!-- Contenido central (tu HTML original) -->
 		<style>
 		    label {display: inline-block; width: 100px;}
 		</style>
 		<h1 style="margin-right: 550">FORMULARIO</h1>
-        <form onsubmit="return validar()">
+        <form id="miFormulario" onsubmit="return validarFormulario()">
             <label for="nombre">Nombre : </label>
             <input type="text" id="nombre" name="nombre" required><br>
             <label for="direccion">Dirección : </label>
@@ -186,15 +186,18 @@
             <input type="submit" value="ENVIAR">
 			<input type="reset" value="BORRAR">
         </form>
+        <!-- Agrega un div para mostrar el mensaje y ocúltalo inicialmente -->
+        <div id="mensajeGuardado" style="display: none; color: green;">
+            ¡Formulario enviado con éxito!
+        </div>
     </div>
-	<div class="PieDePagina">
+    <div class="PieDePagina">
         Autor: Juan Carlos Yepes Gomez
     </div>
 <script>
-    function validar()
+    function validarFormulario() 
 	{
         var campos = document.querySelectorAll("input, select");
-
         for (var i = 0; i < campos.length; i++) 
 		{
             if (campos[i].value === "" || campos[i].value == null) 
@@ -202,25 +205,26 @@
                 alert("Por favor completa todos los campos");
                 campos[i].focus();
                 return false;
-			}
+            }
         }
-		var mensajeGuardado = document.getElementById("mensajeGuardado");
+        var mensajeGuardado = document.getElementById("mensajeGuardado");
         mensajeGuardado.style.display = "block";
-        return true;
+        setTimeout(function() 
+		{
+            mensajeGuardado.style.display = "none";
+            document.getElementById("miFormulario").reset();
+        }, 5000);
+        return false;
     }
-</script>
-<script>
-    document.getElementById('BORRAR').addEventListener('click', function(event) {
-        // Pregunta al usuario si está seguro de que desea limpiar el formulario
+    document.querySelector('#miFormulario input[type="reset"]').addEventListener('click', function(event) 
+	{
         var confirmacion = confirm('¿Estás seguro de que deseas limpiar el formulario?');
         
-        // Si el usuario cancela la confirmación, evita que se borren los datos
-        if (!confirmacion) {
+        if (!confirmacion) 
+		{
             event.preventDefault();
         }
     });
 </script>
-
 </body>
 </html>
-
