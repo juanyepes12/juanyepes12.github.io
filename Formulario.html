@@ -158,20 +158,19 @@
         <img src="Imagen1.jpg" alt="Imagen Ampliada">
     </div>
      <div class="ContenidoCentral">
-        <!-- Contenido central (tu HTML original) -->
 		<style>
 		    label {display: inline-block; width: 100px;}
 		</style>
 		<h1 style="margin-right: 550">FORMULARIO</h1>
         <form id="miFormulario" onsubmit="return validarFormulario()">
             <label for="nombre">Nombre : </label>
-            <input type="text" id="nombre" name="nombre" required><br>
+            <input type="text" id="nombre" name="nombre" validarFormulario()><br>
             <label for="direccion">Dirección : </label>
-            <input type="text" id="direccion" name="direccion" required><br>
+            <input type="text" id="direccion" name="direccion" validarFormulario()><br>
             <label for="telefono">Teléfono : </label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required><br>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" validarFormulario()><br>
             <label for="correo">Correo : </label>
-            <input type="email" id="correo" name="correo" required><br>
+            <input type="email" id="correo" name="correo" validarFormulario()><br>
             <label for="ciudad">Ciudad : </label>
             <select id="ciudad" name="ciudad" style="border: none; border-bottom: 1px solid #333; background: transparent; padding: 4px;">
                 <option value="Seleccione...">Seleccione...</option>
@@ -182,12 +181,11 @@
                 <option value="Medellin">Medellín</option>
             </select><br>
             <label for="edad">Edad : </label>
-            <input type="number" id="edad" name="edad" min="18" max="100" required><br>
+            <input type="number" id="edad" name="edad" min="18" max="100" validarFormulario()><br>
             <input type="submit" value="ENVIAR">
 			<input type="reset" value="BORRAR">
         </form>
-        <!-- Agrega un div para mostrar el mensaje y ocúltalo inicialmente -->
-        <div id="mensajeGuardado" style="display: none; color: green;">
+        <div id="mensajeGuardado" style="display: none; color: #25D366">
             ¡Formulario enviado con éxito!
         </div>
     </div>
